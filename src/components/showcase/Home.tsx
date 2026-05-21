@@ -17,7 +17,7 @@ const Home: React.FC<HomeProps> = (props) => {
         <div style={styles.page}>
             <div style={styles.header}>
                 <h1 style={styles.name}>Ilham nur salam</h1>
-                <h2>Software Engineer</h2>
+                <h2>Software Engineer student</h2>
             </div>
             <div style={styles.buttons}>
                 <Link containerStyle={styles.link} to="about" text="ABOUT" />
@@ -46,14 +46,21 @@ const Home: React.FC<HomeProps> = (props) => {
 
 const styles: StyleSheetCSS = {
     page: {
-        left: 0,
-        right: 0,
-        top: 0,
-        position: 'absolute',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
-        height: '100%',
+    left: 0,
+    right: 0,
+    top: 0,
+    position: 'absolute',
+
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+
+    height: '100%',
+
+    backgroundImage: "url('/bg.png')",
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
     },
     header: {
         textAlign: 'center',

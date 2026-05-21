@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 
 // gambar tools
-import alightMotion from '/videos/alightmotion.png';
+import alightMotion from '../../../assets/pictures/alightmotion.png';
 
 type VideoItemProps = {
     id: string;
@@ -73,14 +73,14 @@ const VideoEditor: React.FC = () => {
 
             <VideoItem
                 id="video-1"
-                src="public/videos/project1.mp4"
+                src="assets/videos/project1.mp4"
                 activeVideoId={activeVideoId}
                 setActiveVideoId={setActiveVideoId}
             />
 
             <VideoItem
                 id="video-2"
-                src="public/videos/project2.mp4"
+                src="assets/videos/project2.mp4"
                 activeVideoId={activeVideoId}
                 setActiveVideoId={setActiveVideoId}
             />

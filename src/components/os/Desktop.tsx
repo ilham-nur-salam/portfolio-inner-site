@@ -48,8 +48,12 @@ const APPLICATIONS: {
         shortcutIcon: 'doomIcon',
         component: Doom,
     },
-    
-   
+    apk: {
+        key: 'apk',
+        name: 'portofolioV1',
+        shortcutIcon: 'windowExplorerIcon',
+        component: () => <></>,
+    },
 };
 
 const Desktop: React.FC<DesktopProps> = (props) => {
@@ -75,6 +79,10 @@ const Desktop: React.FC<DesktopProps> = (props) => {
                 shortcutName: app.name,
                 icon: app.shortcutIcon,
                 onOpen: () => {
+                    if (app.key === 'apk') {
+                        window.open('https://ilhamnursalam.vercel.app/', '_blank', 'noopener,noreferrer');
+                        return;
+                    }
                     addWindow(
                         app.key,
                         <app.component
