@@ -1,7 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
 
-// gambar tools
 import alightMotion from '../../../assets/pictures/alightmotion.png';
+import project1 from '../../../assets/videos/project1.mp4';
+import project2 from '../../../assets/videos/project2.mp4';
 
 type VideoItemProps = {
     id: string;
@@ -18,7 +19,6 @@ const VideoItem: React.FC<VideoItemProps> = ({
 }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
 
-    // auto pause kalau bukan video aktif
     useEffect(() => {
         if (activeVideoId !== id && videoRef.current) {
             videoRef.current.pause();
@@ -73,14 +73,14 @@ const VideoEditor: React.FC = () => {
 
             <VideoItem
                 id="video-1"
-                src="assets/videos/project1.mp4"
+                src={project1}
                 activeVideoId={activeVideoId}
                 setActiveVideoId={setActiveVideoId}
             />
 
             <VideoItem
                 id="video-2"
-                src="assets/videos/project2.mp4"
+                src={project2}
                 activeVideoId={activeVideoId}
                 setActiveVideoId={setActiveVideoId}
             />
